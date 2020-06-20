@@ -1,0 +1,21 @@
+ <h1>Stupid Coaching</h1>
+ 
+ <div class="question">
+   <p><%= p @question %></p>
+ </div>
+<br>
+<div class ="answer">
+ <%=
+  if @question.downcase == "i am going to work"
+    "Great"
+  elsif @question.end_with?("?")
+    "Silly question, get dressed and go to work!"
+  else
+    "I don't care, get dressed and go to work!"
+  end
+%>
+</div>
+<br>
+<div class="link">
+<%= link_to "Ask an other question", ask_path%>
+</div>
